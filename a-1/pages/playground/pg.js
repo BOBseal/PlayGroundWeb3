@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useAmp } from 'next/amp'
 import AUTHH from './authMeta';
 
+const style ={
+    wr: `text-center align-center`
+}
 
 export const config = {amp:true}
 const PG = () => {
@@ -26,7 +29,7 @@ const PG = () => {
     }, []);
     return(
 
- <div> you are logged in to BOB site </div>
+<div className={style.wr}> <div className={style.wr}> you are logged in to BOB site </div></div>
 
     )
 };
