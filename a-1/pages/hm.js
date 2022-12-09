@@ -38,7 +38,7 @@ const HM =()=> {
      <footer className='pt-8'> 
      <div className={style.footText}>
        Welcome to My Site!
-       Created with NextJS Typescript And Tailwind CSS 
+       Created with NextJS, Tailwind CSS and Web3 sdk
        </div> <div>This is My WEB DEVELOPEMENT PLAYGROUND </div><div>This is to check line change</div> 
      </footer>
    </div>
