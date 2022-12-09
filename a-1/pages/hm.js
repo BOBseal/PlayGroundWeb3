@@ -27,7 +27,7 @@ const HM =()=> {
       }, []);
     return (
    <div className={style.wrapper}>
-       <div className='bg-cyan-300 h-auto m-auto shadow-xl shadow-cyan-300 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>  <Navbar/></div>
+       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>  <Navbar/></div>
        <div className={style.underline}><div className=' hover:scale-105 ease-in duration-200'>
      <div className='pb-8'><div className={style.bluetext}>Welcome to BOB's Site
      </div> </div> </div> </div>
