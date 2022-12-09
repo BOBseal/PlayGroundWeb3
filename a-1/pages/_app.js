@@ -1,8 +1,16 @@
-import '../styles/globals.css'
-import {ChainId , ThirdwebProvider } from '@thirdweb-dev/react'
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
+import "../styles/globals.css";
+
+// This is the chainId your dApp will work on.
+//const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }) {
-  return <ThirdwebProvider> <Component {...pageProps} /></ThirdwebProvider>
+  return (
+    <ThirdwebProvider desiredChainId={ChainId.Mumbai}
+    
+    >
+      <Component {...pageProps} />
+    </ThirdwebProvider>
+  )
 }
-
 export default MyApp
