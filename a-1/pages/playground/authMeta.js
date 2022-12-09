@@ -1,8 +1,9 @@
 import { useAddress } from "@thirdweb-dev/react"
 import { useMetamask } from "@thirdweb-dev/react"
+import { useLogout } from "@thirdweb-dev/react";
 import PG from "./pg";
 const style={
-    ww : `text-center`
+    ww : `text-center cursor-pointer`
 }
 const AUTHH =()=>{
     const connectMeta = useMetamask ();

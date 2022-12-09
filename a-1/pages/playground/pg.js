@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useAmp } from 'next/amp'
-import AUTHH from './authMeta';
+import { useDisconnect } from "@thirdweb-dev/react"
 
 const style ={
-    wr: `text-center align-center`
+    wr: `text-center align-center cursor-pointer`
 }
 
 export const config = {amp:true}
 const PG = () => {
     const isAmp = useAmp();
+    const lgout = useDisconnect();
   //  const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
     //const [navBg, setNavBg] = useState('#ecf0f3');
@@ -29,7 +30,9 @@ const PG = () => {
     }, []);
     return(
 
-<div className={style.wr}> <div className={style.wr}> you are logged in to BOB site </div></div>
+<div className={style.wr}> <div onClick={lgout}> LogOUT  </div> 
+<div> IF YOU DIDN'T CONNECT WITH METAMASK YOU WOULDN'T HAVE SEEN THIS LINE</div>
+</div>
 
     )
 };
