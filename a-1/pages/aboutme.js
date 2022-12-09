@@ -24,9 +24,9 @@ const AboutME = () => {
       window.addEventListener('scroll', handleShadow);
     }, []);
     return(
-<div>uju <h3> HUHU</h3>
+
  <div> I am a SEXY LAD </div>
- </div>
+
     )
 };
 export default AboutME
