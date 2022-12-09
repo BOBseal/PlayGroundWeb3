@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useAmp } from 'next/amp'
 import { useDisconnect } from "@thirdweb-dev/react"
+//import claimNFT from './mintnft'
 
 const style ={
     wr: `text-center align-center cursor-pointer`
@@ -31,7 +32,9 @@ const PG = () => {
     return(
 
 <div className={style.wr}> <div onClick={lgout}> LogOUT  </div> 
-<div> IF YOU DIDN'T CONNECT WITH METAMASK YOU WOULDN'T HAVE SEEN THIS LINE</div>
+<div> IF YOU DIDN'T CONNECT WITH METAMASK YOU WOULDN'T HAVE SEEN THIS LINE
+</div>
+{/*<claimNFT/>*/}
 </div>
 
     )
