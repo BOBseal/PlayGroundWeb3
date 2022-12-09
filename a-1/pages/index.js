@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import AboutME from './aboutme'
-import Link from 'next/link'
+//import Image from 'next/image'
+//import styles from '../styles/Home.module.css'
+//import AboutME from './aboutme'
+//import Link from 'next/link'
 import HM from './hm'
-
+import AUTHH from'./playground/authMeta'
 export default function Home() {
   return (
     <div> 
@@ -14,6 +14,8 @@ export default function Home() {
         <link rel="icon" href="/logo.ico" />
       </Head>
 
-       <HM/> </div>
+       <HM/> 
+       {/*<AUTHH/>*/}
+       </div>
   )
 }
