@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react' 
-import Navbar from './comp/navbar';
-import Link from 'next/link';
+import Navbar from './comp/navbar'
+import Link from 'next/link'
+import { useAmp } from 'next/amp'
 const style ={
     wrapper : `text-center align-center`,
     bluetext:`text-6xl pt-6 text-[#000099] transitions-all hover:text-[#4d4dff] font-style: italic font-bold `,
     footText:`text-2xl pl-20 pr-20 text-center font-regular text-gray-600 `,
     underline:`hover:underline`
 }
-
+export const config = {amp:true}
 const HM =()=> {
-
+    const isAmp = useAmp();
     const [shadow, setShadow] = useState(false);
-
+    const handleNav = () => {
+      setNav(!nav);
+      };
     useEffect(() => {
         const handleShadow = () => {
           if (window.scrollY >= 90) {
