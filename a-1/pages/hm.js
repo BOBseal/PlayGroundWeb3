@@ -33,7 +33,7 @@ const HM =()=> {
      </div> </div> </div> </div>
      <div className ='grid grid-cols-2 lg:grid-cols-2 gap-8 flex justify-center'>
        <Link href={"./aboutme"}><button className='flex  w-5/6 h-auto m-auto rounded-xl shadow-lg shadow-gray-400 rounded-xl flex items-center justify-center p-3 hover:scale-105 ease-in duration-300 font-bold'> ABOUT ME</button></Link>
-    <Link href ={"./playground/authMeta"}> <div className=' flex w-5/6 h-auto m-auto rounded-xl shadow-lg shadow-gray-400 rounded-xl flex items-center justify-center p-3 hover:scale-105 ease-in duration-300 font-bold'> My Playground
+    <Link href ={"./playground/playground"}> <div className=' flex w-5/6 h-auto m-auto rounded-xl shadow-lg shadow-gray-400 rounded-xl flex items-center justify-center p-3 hover:scale-105 ease-in duration-300 font-bold'> My Playground
     </div>  </Link> </div>
      <footer className='pt-8'> 
      <div className={style.footText}>

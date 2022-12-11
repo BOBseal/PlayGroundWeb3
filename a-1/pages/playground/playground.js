@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useAmp } from 'next/amp'
-import { useDisconnect } from "@thirdweb-dev/react"
-//import claimNFT from './mintnft'
-
-const style ={
-    wr: `text-center align-center cursor-pointer`
-}
+import { ConnectW } from './authMeta';
 
 export const config = {amp:true}
-const PG = () => {
+const Playground = () => {
     const isAmp = useAmp();
-    const lgout = useDisconnect();
   //  const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
     //const [navBg, setNavBg] = useState('#ecf0f3');
@@ -31,12 +25,8 @@ const PG = () => {
     }, []);
     return(
 
-<div className={style.wr}> <div onClick={lgout}> LogOUT  </div> 
-<div> IF YOU DIDN'T CONNECT WITH METAMASK YOU WOULDN'T HAVE SEEN THIS LINE
-</div>
-{/*<claimNFT/>*/}
-</div>
+ <div> <div> <ConnectW/> </div> </div>
 
     )
 };
-export default PG
+export default Playground

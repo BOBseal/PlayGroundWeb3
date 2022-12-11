@@ -1,18 +1,43 @@
-import { useAddress } from "@thirdweb-dev/react"
-import { useMetamask } from "@thirdweb-dev/react"
-import { useLogout } from "@thirdweb-dev/react";
-import PG from "./pg";
-const style={
-    ww : `text-center cursor-pointer`
-}
-const AUTHH =()=>{
-    const connectMeta = useMetamask ();
-    const addr = useAddress();
-    const Au =()=> {
-        return( 
-           <div className={style.ww}> <div onClick={connectMeta}> Connect </div></div>
-        )
+import {
+    useMetamask,
+    useWalletConnect,
+    useCoinbaseWallet,
+    useNetwork,
+    useAddress,
+    useDisconnect,
+  } from '@thirdweb-dev/react';
+  
+  export const ConnectW = () => {
+    const connectWithCoinbaseWallet = useCoinbaseWallet();
+    const connectWithMetamask = useMetamask();
+    const connectWithWalletConnect = useWalletConnect();
+    const disconnectWallet = useDisconnect();
+    const address = useAddress();
+    const network = useNetwork();
+  
+    // If a wallet is connected, show address, chainId and disconnect button
+    if (address) {
+      return (
+        <div>
+          Address: {address}
+          <br />
+          Chain ID: {network[0].data.chain && network[0].data.chain.id}
+          <br />
+          <button onClick={disconnectWallet}>Disconnect</button>
+        </div>
+      );
     }
-    return <> {addr ? <PG/> : Au()}</>
-}
-export default AUTHH
+  
+    // If no wallet is connected, show connect wallet options
+    return (
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8'>
+        <button onClick={() => connectWithCoinbaseWallet()}>
+          Connect Coinbase Wallet
+        </button>
+        <button onClick={() => connectWithMetamask()}>Connect MetaMask</button>
+        <button onClick={() => connectWithWalletConnect()}>
+           WalletConnect
+        </button>
+      </div>
+    );
+  };

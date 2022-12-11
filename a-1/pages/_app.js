@@ -13,4 +13,6 @@ function MyApp({ Component, pageProps }) {
     </ThirdwebProvider>
   )
 }
+
 export default MyApp
+
