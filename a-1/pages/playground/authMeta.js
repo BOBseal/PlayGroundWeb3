@@ -6,6 +6,8 @@ import {
     useAddress,
     useDisconnect,
   } from '@thirdweb-dev/react';
+import Link from 'next/link';
+import AL from './afterLogin';
   
   export const ConnectW = () => {
     const connectWithCoinbaseWallet = useCoinbaseWallet();
@@ -17,13 +19,10 @@ import {
   
     // If a wallet is connected, show address, chainId and disconnect button
     if (address) {
-      return (
-        <div>
-          Address: {address}
-          <br />
-          Chain ID: {network[0].data.chain && network[0].data.chain.id}
-          <br />
+      return ( <div>
+        <div className='grid grid-cols-1 lg:grid-cols-1 gap-8 flex justify-center'>
           <button onClick={disconnectWallet}>Disconnect</button>
+        </div> <AL/>
         </div>
       );
     }
