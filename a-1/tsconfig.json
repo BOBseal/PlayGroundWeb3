@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/comp/navnew.js", "pages/playGround/authMeta.js", "pages/playGround/playgrpages/playground.js"  ],
   "exclude": [
     "node_modules"
   ]

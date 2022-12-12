@@ -2,41 +2,45 @@ import {
     useMetamask,
     useWalletConnect,
     useCoinbaseWallet,
-    useNetwork,
     useAddress,
     useDisconnect,
   } from '@thirdweb-dev/react';
-import Link from 'next/link';
-import AL from './afterLogin';
+
+
+  const styl={
+    MainContainer:``,
+    ButtonBox:``,
+    ConnectPageUI:``,
+  }
   
-  export const ConnectW = () => {
+  const BOBCONN = () => {
     const connectWithCoinbaseWallet = useCoinbaseWallet();
     const connectWithMetamask = useMetamask();
     const connectWithWalletConnect = useWalletConnect();
     const disconnectWallet = useDisconnect();
     const address = useAddress();
-    const network = useNetwork();
   
     // If a wallet is connected, show address, chainId and disconnect button
     if (address) {
-      return ( <div>
-        <div className='grid grid-cols-1 lg:grid-cols-1 gap-8 flex justify-center'>
+      return (
+        <div>
           <button onClick={disconnectWallet}>Disconnect</button>
-        </div> <AL/>
         </div>
       );
     }
   
     // If no wallet is connected, show connect wallet options
     return (
-      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div>
         <button onClick={() => connectWithCoinbaseWallet()}>
-          Connect Coinbase Wallet
+          COINBASE CONNECT 
         </button>
-        <button onClick={() => connectWithMetamask()}>Connect MetaMask</button>
+        <button onClick={() => connectWithMetamask()}>METAMASK CONNECT</button>
         <button onClick={() => connectWithWalletConnect()}>
-           WalletConnect
+         WALLET-CONNECT
         </button>
       </div>
     );
   };
+
+  export default BOBCONN

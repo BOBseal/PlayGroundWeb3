@@ -24,8 +24,15 @@ const AboutME = () => {
       window.addEventListener('scroll', handleShadow);
     }, []);
     return(
-
- <div> I am a SEXY LAD </div>
+        
+    <div> 
+        <div className=''>
+          <div>  ABOUT ME : </div>
+        </div>
+        <div> 
+            I am a Student !!!! I am very Interested in WEB Developement and is Self-Learning JS and its frameworks like NEXT.JS
+        </div>
+    </div>
 
     )
 };
