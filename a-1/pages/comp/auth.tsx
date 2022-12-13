@@ -6,6 +6,7 @@ import {
     useDisconnect,
   } from '@thirdweb-dev/react';
 import Link from 'next/link';
+import Navba from './navnew';
 
 
   const styl={
@@ -31,8 +32,8 @@ import Link from 'next/link';
     }
   
     // If no wallet is connected, show connect wallet options
-    return (
-      <div>
+    return (<div ><div className='flex items-center justify-center pb-8 bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'> <Navba/></div>
+      <div className='grid grid-cols-3 gap-4 pt-8'>
         <button onClick={() => connectWithCoinbaseWallet()}>
           COINBASE CONNECT 
         </button>
@@ -40,8 +41,7 @@ import Link from 'next/link';
         <button onClick={() => connectWithWalletConnect()}>
          WALLET-CONNECT
         </button>
-        <Link href={'./'}><div> Return to Home </div></Link>
-      </div>
+      </div></div>
     );
   };
 

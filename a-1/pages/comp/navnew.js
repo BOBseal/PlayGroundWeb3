@@ -6,10 +6,12 @@ function MobileNav({open, setOpen}) {
         <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-y-0" : "-translate-y-full"} transition-transform duration-300 ease-in-out filter  `}>
            
             <div className="flex flex-col justify-center items-center mt-28">
+            <Link  href= './'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  HOME </div> </Link>
                 <a className="text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500" href="./aboutme" >
                     About Me
                 </a>
                 <Link  href= './playground'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  Playground </div> </Link>
+                
             </div>  
         </div>
     )
