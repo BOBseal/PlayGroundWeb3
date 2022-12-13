@@ -5,6 +5,7 @@ import {
     useAddress,
     useDisconnect,
   } from '@thirdweb-dev/react';
+import Link from 'next/link';
 
 
   const styl={
@@ -39,6 +40,7 @@ import {
         <button onClick={() => connectWithWalletConnect()}>
          WALLET-CONNECT
         </button>
+        <Link href={'./'}><div> Return to Home </div></Link>
       </div>
     );
   };

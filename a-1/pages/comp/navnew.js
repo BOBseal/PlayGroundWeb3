@@ -9,6 +9,7 @@ function MobileNav({open, setOpen}) {
                 <a className="text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500" href="./aboutme" >
                     About Me
                 </a>
+                <Link  href= './playground'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  Playground </div> </Link>
             </div>  
         </div>
     )

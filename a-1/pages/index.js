@@ -15,7 +15,6 @@ export default function Home() {
       </Head>
 
        <HM/> 
-         <Link  href= './playground'> <div>  Playground </div> </Link>
        {/*<AUTHH/>*/}
        </div>
   )
