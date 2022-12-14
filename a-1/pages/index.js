@@ -1,11 +1,8 @@
 import { useAddress } from '@thirdweb-dev/react'
 import Head from 'next/head'
-import Link from 'next/link'
-//import Image from 'next/image'
-//import styles from '../styles/Home.module.css'
-//import AboutME from './aboutme'
-//import Link from 'next/link'
 import HM from './hm'
+
+
 export default function Home() {
   const add = useAddress();
   console.log(add)

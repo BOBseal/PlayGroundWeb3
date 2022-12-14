@@ -11,21 +11,9 @@ const PagePlay = () => {
     const isAmp = useAmp();
     const adr = useAddress();
     const discon = useDisconnect();
-    const [shadow, setShadow] = useState(false);
-  
-    useEffect(() => {
-      const handleShadow = () => {
-        if (window.scrollY >= 90) {
-          setShadow(true);
-        } else {
-          setShadow(false);
-        }
-      };
-      window.addEventListener('scroll', handleShadow);
-    }, []);
     if (adr) {
         return( <div> 
-         <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>  
+         <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>  
           <Navba/>
            </div> <r className='grid grid-cols-2'> <a className='pt-2 pb-8 flex items-center justify-left pl-8 hover:scale-105 ease-in duration-300'>
           <Link href={'./aboutme'}> <b className='flex w-40 h-16 bg-red-300 hover:bg-yellow-300 flex items-center justify-center'>

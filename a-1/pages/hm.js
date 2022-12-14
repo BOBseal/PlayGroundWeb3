@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react' ;
+import React from 'react' ;
 import { useAmp } from 'next/amp';
 import Navba from './comp/navnew';
 const style ={
@@ -10,23 +10,9 @@ const style ={
 export const config = {amp:true}
 const HM =()=> {
     const isAmp = useAmp();
-    const [shadow, setShadow] = useState(false);
-    const handleNav = () => {
-      setNav(!nav);
-      };
-    useEffect(() => {
-        const handleShadow = () => {
-          if (window.scrollY >= 90) {
-            setShadow(true);
-          } else {
-            setShadow(false);
-          }
-        };
-        window.addEventListener('scroll', handleShadow);
-      }, []);
     return (
    <div className={style.wrapper}>
-       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>
+       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>
           <Navba/> 
        {/*<Navbar/>*/}</div>
        <div className={style.underline}><div className=' hover:scale-105 ease-in duration-200'>
