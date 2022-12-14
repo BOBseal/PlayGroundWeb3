@@ -10,9 +10,9 @@ import Navba from './navnew';
 
 
   const styl={
-    MainContainer:``,
-    ButtonBox:``,
-    ConnectPageUI:``,
+    MainContainer:`pt-2 pb-8 flex items-center justify-center pl-8 `,
+    ButtonBox:`flex w-40 h-16 bg-red-300 hover:bg-yellow-300 flex items-center justify-center hover:scale-105 ease-in duration-300`,
+    boxtext:`flex font-semibold cursor-pointer hover:text-red-500 text-lg`,
   }
   
   const BOBCONN = () => {
@@ -32,16 +32,16 @@ import Navba from './navnew';
     }
   
     // If no wallet is connected, show connect wallet options
-    return (<div ><div className='flex items-center justify-center pb-8 bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'> <Navba/></div>
-      <div className='grid grid-cols-3 gap-4 pt-8'>
-        <button onClick={() => connectWithCoinbaseWallet()}>
-          COINBASE CONNECT 
-        </button>
-        <button onClick={() => connectWithMetamask()}>METAMASK CONNECT</button>
-        <button onClick={() => connectWithWalletConnect()}>
+    return (<div><div className='flex items-center justify-center pb-8 bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'> <Navba/></div>
+    <div className={styl.MainContainer}>  <div className='grid grid-cols-3 gap-40 '>
+      <a className={styl.ButtonBox}> <a className={styl.boxtext}> <button onClick={() => connectWithCoinbaseWallet()}>
+          COINBASE
+        </button> </a></a>
+        <a  className={styl.ButtonBox}>  <a className={styl.boxtext}>  <button onClick={() => connectWithMetamask()}>METAMASK</button > </a> </a>
+    <a className={styl.ButtonBox}> <a className={styl.boxtext}>     <button onClick={() => connectWithWalletConnect()}>
          WALLET-CONNECT
-        </button>
-      </div></div>
+        </button> </a></a>
+      </div></div> </div>
     );
   };
 

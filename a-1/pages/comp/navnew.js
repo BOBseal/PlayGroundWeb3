@@ -7,10 +7,7 @@ function MobileNav({open, setOpen}) {
            
             <div className="flex flex-col justify-center items-center mt-28">
             <Link  href= './'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  HOME </div> </Link>
-                <a className="text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500" href="./aboutme" >
-                    About Me
-                </a>
-                <Link  href= './playground'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  Playground </div> </Link>
+                <Link  href= './playground'> <div className='text-2xl font-bold text-gray-400 my-4 hover:scale-105 ease-in duration-300 hover:text-red-500'>  PLAYGROUND </div> </Link>
                 
             </div>  
         </div>

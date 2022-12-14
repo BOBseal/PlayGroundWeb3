@@ -9,9 +9,12 @@ import Link from 'next/link';
 export const config = {amp:true}
 const AboutME = () => {
   const add = useAddress();
-    const isAmp = useAmp();
-    return (<div> <Link href='./'><div> Return Home</div> </Link>
-      <div> Myself BOB and I welcome you!!</div></div>
+    return (<div> <> <Navba/></>
+      <div>
+      <Link href={'./'}> <div > Return Home</div> </Link>
+      <div> Myself BOB and I welcome you!!</div>
+      </div>
+      </div>
     )
 }
 export default AboutME

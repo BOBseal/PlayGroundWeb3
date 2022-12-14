@@ -26,7 +26,7 @@ const HM =()=> {
       }, []);
     return (
    <div className={style.wrapper}>
-       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
+       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>
           <Navba/> 
        {/*<Navbar/>*/}</div>
        <div className={style.underline}><div className=' hover:scale-105 ease-in duration-200'>
