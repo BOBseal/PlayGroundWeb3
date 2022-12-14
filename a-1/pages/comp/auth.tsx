@@ -10,7 +10,7 @@ import Navba from './navnew';
 
 
   const styl={
-    MainContainer:`pt-2 pb-8 flex items-center justify-center pl-8 `,
+    MainContainer:`pt-2 pb-8 flex items-center justify-center pl-8 pt-16`,
     ButtonBox:`flex w-40 h-16 bg-red-300 hover:bg-yellow-300 flex items-center justify-center hover:scale-105 ease-in duration-300`,
     boxtext:`flex font-semibold cursor-pointer hover:text-red-500 text-lg`,
   }
