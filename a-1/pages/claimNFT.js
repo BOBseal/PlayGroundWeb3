@@ -1,4 +1,4 @@
-import { useAddress, useClaimNFT, useContract } from "@thirdweb-dev/react"
+import { useAddress, useClaimNFT, useContract } from "@thirdweb-dev/react";
 
 const CMGSLESS = ()=>{
     const {contract}= useContract( 0x07a266e1bA25007132B9919225E5cC9cc0042740 , "nft-drop");

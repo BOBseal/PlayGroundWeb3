@@ -1,8 +1,13 @@
-import { useAddress } from '@thirdweb-dev/react'
-import Head from 'next/head'
-import HM from './hm'
-
-
+import { useAddress } from '@thirdweb-dev/react';
+import Head from 'next/head';
+import Navba from './comp/navnew';
+import HM from './hm';
+const style ={
+  wrapper : `text-center align-center`,
+  bluetext:`text-6xl pt-6 text-[#000099] transitions-all hover:text-[#4d4dff] font-style: italic font-bold `,
+  footText:`text-2xl pl-20 pr-20 text-center font-regular text-gray-600 `,
+  underline:`hover:underline`
+}
 export default function Home() {
   const add = useAddress();
   console.log(add)
@@ -13,9 +18,12 @@ export default function Home() {
         <meta name="description" content="Chuckes! I am a Danger" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-
+      <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>
+          <Navba/> 
+       {/*<Navbar/>*/}</div>
        <HM/> 
        {/*<AUTHH/>*/}
        </div>
   )
 }
+

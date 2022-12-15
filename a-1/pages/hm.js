@@ -1,5 +1,4 @@
 import React from 'react' ;
-import { useAmp } from 'next/amp';
 import Navba from './comp/navnew';
 const style ={
     wrapper : `text-center align-center`,
@@ -7,16 +6,12 @@ const style ={
     footText:`text-2xl pl-20 pr-20 text-center font-regular text-gray-600 `,
     underline:`hover:underline`
 }
-export const config = {amp:true}
+
 const HM =()=> {
-    const isAmp = useAmp();
     return (
    <div className={style.wrapper}>
-       <div className='bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>
-          <Navba/> 
-       {/*<Navbar/>*/}</div>
        <div className={style.underline}><div className=' hover:scale-105 ease-in duration-200'>
-     <div className='pb-8'><div className={style.bluetext}>Welcome to BOB's Site
+     <div className='pb-8'><div className={style.bluetext}>Welcome to BOB Site
      </div> </div> </div> </div>
      <footer className='pt-8'> 
      <div className={style.footText}>
