@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navba from './comp/navnew';
+import Navba from '../comp/navnew';
 import { useAddress } from '@thirdweb-dev/react';
 
 const AboutME = () => {
