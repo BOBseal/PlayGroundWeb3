@@ -1,5 +1,5 @@
 import React from 'react' ;
-import Navba from '../comp/navnew';
+import Navba from './comp/navnew';
 const style ={
     wrapper : `text-center align-center`,
     bluetext:`text-6xl pt-6 text-[#000099] transitions-all hover:text-[#4d4dff] font-style: italic font-bold `,
