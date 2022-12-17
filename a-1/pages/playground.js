@@ -11,7 +11,7 @@ const PagePlay = () => {
     const discon = useDisconnect();
     if (adr) {
         return( <div className=''> 
-         <div className='bg-red-300 h-auto m-auto shadow-lg shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>  
+         <div className='w-full bg-red-300 h-auto m-auto shadow-lg shadow-gray-300 flex items-center justify-center p-2 hover:scale-105 ease-in duration-300 hover:bg-yellow-300'>  
           <Navba/>
            </div> <r className='grid grid-cols-3 gap-8'> <a className='pt-8 pb-8 flex items-center justify-left pl-8 hover:scale-105 ease-in duration-300'>
           <Link href={'./aboutme'}> <b className='flex w-40 h-16 bg-red-300 hover:bg-yellow-300 flex items-center justify-center rounded-2xl'>
