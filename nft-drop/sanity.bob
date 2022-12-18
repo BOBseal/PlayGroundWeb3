@@ -9,3 +9,16 @@ export const configs ={
 }
 export const sanityCluent = createClient(configs)
 export const urlFor =(source) => createImageUrlBuilder(configs).image(source)
+
+
+
+
+
+ //login adr
+
+//color gradient
+bg-gradient-to-bl w-screen from-[#ff1a1a] to-[#00ffff]
+
+//button function
+onClick={()=>(adr ? discon() : conn())}>  
+      {adr? 'Log Out' : 'Log In'}
