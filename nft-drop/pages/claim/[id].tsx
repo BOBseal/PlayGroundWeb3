@@ -41,9 +41,9 @@ const DropPG =({collections} : Props) =>{
                   </b>
 
                   <b className='flex justify-end pr-8 py-1 lg:pr-16'>
-                        <b className='flex justify-end items-center'>
-                        {adr && <p className=' text-xs font-bold text-[#00ffff]'>{adr.substring(0,4)}...{adr.substring(adr.length - 4)}</p>}
-                        </b>
+                        <b className='flex justify-end items-center'> <div className=''>
+                        {adr && <p className=' text-xs font-bold text-[#00ffff] pb-6'>{adr.substring(0,4)}...{adr.substring(adr.length - 4)}</p>}
+                        </div> </b>
                       <button className='bg-gradient-to-tr  from-[#ff1a1a] to-[#00ffff] h-14 w-20  rounded-3xl cursor-pointer text-white hover:text-[#00ffff] ' onClick={()=>(adr ? discon() : conn())}>  
                       {adr? 'Log Out' : 'Log In'}
                       </button>
