@@ -31,7 +31,7 @@ const Home = ({collections}:Props) => {
       </h1>
       <main className='flex justify-center h-screen'> <main className='bg-gray-200/20 w-3/5 h-4/5 flex shadow-lg shadow-gray-200/10 items-center justify-center rounded-xl lg:rounded-2xl'>
       <div className=''>{collections.map(collection =>(
-        <div className='flex items-center align-center cursor-pointer flex-col'>
+        <div className='flex items-center align-center cursor-pointer flex-col' key={collection._id}>
          <Link href={`/claim/${collection.slug.current}`}>
           <a className=' flex items-center justify-center pb-14 lg:pb-16'>  
             <img className='w-48 rounded-2xl lg:w-80 md:w-64 ' src={urlFor(collection.mainimage).url()} alt=""/></a>

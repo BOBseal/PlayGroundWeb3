@@ -51,25 +51,27 @@ const DropPG =({collections} : Props) =>{
             </a>
 
 
-            <p className='grid grid-cols-1 w-screen pt-8'>
+            <p className='grid grid-cols-1 w-screen pt-8'> {collections.map(collection =>(  <div key={collection._id}>
               
                         <b className='flex justify-center pb-8 underline'>
-                       <div> {collections.map(collection =>(   <a className='font-semibold flex text-black-400 cursor-pointer text-xl lg:text-4xl'> {collection.nftCollectionName}</a> ))}</div>
+                       <div> <a className='font-semibold flex text-black-400 cursor-pointer text-xl lg:text-4xl'> {collection.nftCollectionName}</a></div>
                         </b>
 
                         <b className='flex justify-center'>
                              <a className='flex items-center align-center justify-center p-1 flex border-2 bg-gradient-to-br  from-[#ff1a1a] to-[#00ffff] rounded-2xl border-[#b30047]'> 
                                
-                              <div className='w-48 lg:w-96 cursor-pointer'>{collections.map(collection =>( <img className='' src={urlFor(collection.mainimage).url()} alt=""  /> ))}</div>
+                              <div className='w-48 lg:w-96 cursor-pointer'> <img className='' src={urlFor(collection.mainimage).url()} alt=""  /> </div>
                              
                              </a>
                         </b>
 
                         <b className='flex justify-center pt-8 lg:pt-12'>
                         <button className='bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] h-14 w-2/6 rounded-3xl cursor-pointer text-white hover:text-blue-700  felx text-lg lg:w-1/6 md:2/6'>  CLAIM NFT</button>
+                        
                         </b>
               
-            </p>
+            </div>))} 
+              </p> 
 
 
         </p>

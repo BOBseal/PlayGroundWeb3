@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/collections/[id].js", "schemas/index.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/collections/[id].js", "schemas/index.ts", "pages/claim/comp/navnew.js", "pages/claim/comp/navnew.js"],
   "exclude": ["node_modules"]
 }
