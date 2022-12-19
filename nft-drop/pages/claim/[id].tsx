@@ -22,7 +22,7 @@ export const style={
 };
 
 interface Props{
-  collections:COLLECTION
+  collections:COLLECTION[]
 };
 
 const DropPG =({collections} : Props) =>{
