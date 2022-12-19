@@ -13,7 +13,7 @@ const styl= {
     collections:COLLECTION[]
   }
 
-const Home  = ({collections}:Props) => {
+const Home = ({collections}:Props) => {
   return(
 <a>
     <Head>

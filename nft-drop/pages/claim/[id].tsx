@@ -1,15 +1,12 @@
 
-import Image from 'next/image'
 import Head from 'next/head'
 import Navba from './comp/navnew'
 import { useAddress, useDisconnect, useMetamask, } from '@thirdweb-dev/react'
-import { useAmp } from 'next/amp'
 import { COLLECTION } from '../../typings'
 import type { GetServerSideProps, NextPage } from 'next'
 import { sanityClient,urlFor } from '../../sanity'
-import collection from '../../schemas/collection'
 
-export const config = { amp: false };
+
 export const style={
   splitnavbar : `grid grid-cols-2 bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] w-screen h-16 shadow-md shadow-gray-400`,
   a : ``,
@@ -23,7 +20,8 @@ export const style={
 
 interface Props{
   collections:COLLECTION[]
-}
+};
+
 const DropPG =({collections} : Props) =>{
   const adr =useAddress();
   const discon = useDisconnect();
