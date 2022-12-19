@@ -5,10 +5,10 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'backend',
+  title: 'bobs',
 
-  projectId: 'cbk5a866',
-  dataset: 'nftdropids',
+  projectId: 'lv2rytef',
+  dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
 

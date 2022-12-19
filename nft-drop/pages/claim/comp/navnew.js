@@ -3,10 +3,10 @@ import { useState } from 'react'
 
 function MobileNav({open, setOpen}) {
     return (<a>
-        <div className={`absolute top-0 left-0 h-screen w-1/3 bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] lg:w-1/6 md:w-1/5 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter  `}>
+        <div className={`absolute top-0 left-0 h-screen w-1/3 bg-gradient-to-tr from-[#f2f2f2] to-[#8c8c8c] lg:w-1/6 md:w-1/5 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter  `}>
            
             <div className="flex flex-col justify-center items-center mt-28">
-          <div>BBBB</div> 
+          <Link href={'/'}> <div className='cursor-pointer hover:text-gray-600'>HOME</div> </Link>
                 
             </div>  
         </div>{ /*<div className='h-1/6 bg-blue-400'>
@@ -21,7 +21,7 @@ function MobileNav({open, setOpen}) {
     return (
         <nav>
             <MobileNav open={open} setOpen={setOpen}/>
-            <div className="w-11/12 flex justify-end items-center">
+            <div className="w-8 flex justify-end items-center ">
                 <div className="group z-50 relative w-6 h-6 mt-10 cursor-pointer flex-col justify-between items-center align-center flex" onClick={() => {
                     setOpen(!open)
                 }}>

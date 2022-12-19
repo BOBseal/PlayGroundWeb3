@@ -1,8 +1,0 @@
-
-
-const ADHER = async()=>{
-
-    return (
-   <a> {adr && <p className='flex text-center align-center items-center text-xs pr-1 font-bold text-[#751aff]'>{adr.substring(0,4)}...{adr.substring(adr.length - 4)}</p>}</a>
-    )}
-    export default ADHER

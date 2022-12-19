@@ -3,29 +3,32 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Navba from './comp/navnew'
 import { useAddress, useDisconnect, useMetamask, } from '@thirdweb-dev/react'
-import { NextPage } from 'next'
 import { useAmp } from 'next/amp'
+import { COLLECTION } from '../../typings'
+import type { GetServerSideProps, NextPage } from 'next'
+import { sanityClient,urlFor } from '../../sanity'
+import collection from '../../schemas/collection'
 
-
-export const config = { amp: 'hybrid' };
+export const config = { amp: false };
 export const style={
-  splitnavbar : `grid grid-cols-2 bg-gradient-to-bl w-screen from-[#ff1a1a] to-[#00ffff] w-screen h-16`,
-  loginbutton : ``,
-  claimbutton : ``,
-  navbarcomponent:``,
-  head:``,
-  imgbox:``,
-  imgholder:``,
-  colorstyle:``,
+  splitnavbar : `grid grid-cols-2 bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] w-screen h-16 shadow-md shadow-gray-400`,
+  a : ``,
+  b : ``,
+  c :``,
+  d :``,
+  e :``,
+  f :``,
+  g :``,
 };
 
-
-const DropPG : NextPage=() =>{
-    const isAMP = useAmp();
+interface Props{
+  collections:COLLECTION[]
+}
+const DropPG =({collections} : Props) =>{
   const adr =useAddress();
   const discon = useDisconnect();
   const conn =useMetamask();
-  return ( <> 
+  return ( <div> <div>
     <Head>
         <title>
             CLAIM BOB-NFTS
@@ -35,15 +38,15 @@ const DropPG : NextPage=() =>{
 
         <p className='flex-col'>
             <a className={style.splitnavbar}>
-                  <b className='flex justify-left items-center'>
-                      <Navba/>
+                  <b className='flex justify-left align-center items-center'>
+                     <a className='pb-8'> <Navba/></a>
                   </b>
 
-                  <b className='flex justify-end pr-8 lg:pr-16'>
+                  <b className='flex justify-end pr-8 py-1 lg:pr-16'>
                         <b className='flex justify-end items-center'>
                         {adr && <p className=' text-xs font-bold text-[#00ffff]'>{adr.substring(0,4)}...{adr.substring(adr.length - 4)}</p>}
                         </b>
-                      <button className='bg-gradient-to-tr  from-[#ff1a1a] to-[#00ffff] h-14 w-20 rounded-3xl cursor-pointer text-white hover:text-[#00ffff] ' onClick={()=>(adr ? discon() : conn())}>  
+                      <button className='bg-gradient-to-tr  from-[#ff1a1a] to-[#00ffff] h-14 w-20  rounded-3xl cursor-pointer text-white hover:text-[#00ffff] ' onClick={()=>(adr ? discon() : conn())}>  
                       {adr? 'Log Out' : 'Log In'}
                       </button>
                   </b>
@@ -53,13 +56,13 @@ const DropPG : NextPage=() =>{
             <p className='grid grid-cols-1 w-screen pt-8'>
               
                         <b className='flex justify-center pb-8 underline'>
-                            <a className=' flex text-red-500'> BOB WALLPAPER COLLECTION </a>
+                       <div> {collections.map(collection =>(   <a className='font-semibold flex text-black-400 cursor-pointer text-xl lg:text-4xl'> {collection.nftCollectionName}</a> ))}</div>
                         </b>
 
                         <b className='flex justify-center'>
                              <a className='flex items-center align-center justify-center p-1 flex border-2 bg-gradient-to-br  from-[#ff1a1a] to-[#00ffff] rounded-2xl border-[#b30047]'> 
                                
-                               <Image className='rounded-2xl border-2 border-red-400' src = '/99398032_p0.jpg' alt ="nft" height={180} width={180} /> 
+                              <div className='w-48 lg:w-96 cursor-pointer'>{collections.map(collection =>( <img className='' src={urlFor(collection.mainimage).url()} alt=""  /> ))}</div>
                              
                              </a>
                         </b>
@@ -72,8 +75,34 @@ const DropPG : NextPage=() =>{
 
 
         </p>
-</>
+        
+        </div>
+</div>
 )
 };
 
 export default DropPG
+export const getServerSideProps : GetServerSideProps = async()=>{
+  const query =`*[_type == "collection"]{
+    _id,
+    title,
+    address,
+      description,
+      nftCollectionName,
+      mainimage{asset},
+  previewimage{asset},
+  slug{current},
+  creator-> {
+    _id,
+    name,
+    address,
+    slug{current},
+  },
+}`
+
+const collections = await sanityClient.fetch(query)
+console.log(collections)
+return {
+  props: {collections}
+}
+}
