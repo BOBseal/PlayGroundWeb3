@@ -1,10 +1,13 @@
 
 import Head from 'next/head'
 import Navba from './comp/navnew'
-import { useAddress, useDisconnect, useMetamask, } from '@thirdweb-dev/react'
+import { useAddress, useDisconnect, useMetamask, useClaimNFT, useContract ,useMintNFT, useNFTDrop } from '@thirdweb-dev/react'
 import { COLLECTION } from '../../typings'
 import type { GetServerSideProps, NextPage } from 'next'
 import { sanityClient,urlFor } from '../../sanity'
+import { useEffect, useState } from 'react'
+import collection from '../../schemas/collection'
+import { BigNumber } from 'ethers'
 
 
 export const style={
@@ -19,13 +22,50 @@ export const style={
 };
 
 interface Props{
-  collections:COLLECTION[]
+  collections:COLLECTION
 };
 
 const DropPG =({collections} : Props) =>{
+  const [claimedSupply, setClaimedSupply] = useState<number>(0);
+  const [totalSupply , settotalSupply] = useState<BigNumber>();
+  const [loading ,setLoading ] = useState(true);
   const adr =useAddress();
   const discon = useDisconnect();
   const conn =useMetamask();
+  const NFTdrop = useContract("0x07a266e1bA25007132B9919225E5cC9cc0042740", "nft-drop").contract;
+
+useEffect ( ()=> {
+if (!NFTdrop) return;
+const fetchNFTdropData =async () => {
+  setLoading(true);
+  const claimed = await NFTdrop.getAllClaimed();
+  const total = await NFTdrop.totalSupply();
+  setClaimedSupply ( claimed.length);
+  settotalSupply (total)
+  setLoading(false);
+}
+fetchNFTdropData();
+},[NFTdrop]
+
+)
+
+
+const MintNFT = ()=> {
+  if (!NFTdrop || !adr) return ;
+
+  const quantity =1;
+
+  NFTdrop.claimTo(adr , quantity).then((tx) => {
+    const reciept = tx[0].receipt
+    const CmdTknId = tx[0].id
+  }).catch(err=> {
+    console.log(err)
+  }).finally(()=> {
+    setLoading(false);
+  })
+}
+
+
   return ( <div> <div>
     <Head>
         <title>
@@ -64,9 +104,21 @@ const DropPG =({collections} : Props) =>{
                              
                              </a>
                         </b>
+                        {loading?(
+                           <div className='animate-pulse flex justify-center pt-4'>
+                           NFT Supply Data Loading...
+                         </div>
+
+                        ) : (
+                          <div className='flex justify-center pt-4'>
+                          {claimedSupply}/{totalSupply?.toString()} Claimed
+                        </div>
+                        )
+                        
+                      }
 
                         <b className='flex justify-center pt-8 lg:pt-12'>
-                        <button className='bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] h-14 w-2/6 rounded-3xl cursor-pointer text-white hover:text-blue-700  felx text-lg lg:w-1/6 md:2/6'>  CLAIM NFT</button>
+                        <button disabled={loading || claimedSupply === totalSupply?.toNumber() || !adr} className='bg-gradient-to-bl from-[#ff1a1a] to-[#00ffff] h-14 w-2/6 rounded-3xl cursor-pointer text-white hover:text-blue-700  felx text-lg lg:w-1/6 md:2/6 disabled:bg-gray-400' onClick={MintNFT}>  CLAIM NFT</button>
                         
                         </b>
               
