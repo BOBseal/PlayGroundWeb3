@@ -7,6 +7,11 @@ const activeChainId = ChainId.Mumbai
 function MyApp({ Component, pageProps }) {
   return (
     <ThirdwebProvider desiredChainId={ChainId.activeChainId}
+    authConfig={{
+      domain: "bob.app",
+      authUrl: '/api/auth',
+      loginRedirect: "/playground",
+    }}
     sdkOptions={{gasless:{openzeppelin : {relayerUrl : process.env.RURL ,},}, }}
     >
       <Component {...pageProps} />
