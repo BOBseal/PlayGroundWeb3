@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/collections/[id].js", "schemas/index.ts", "pages/claim/comp/navnew.js", "pages/claim/comp/navnew.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/collections/[id].js", "schemas/index.ts", "pages/claim/comp/navnew.js", "pages/claim/comp/navnew.js", "utils/checkBalance.js", "pages/login.jsx", "pages/portal/[pp].jsx"],
   "exclude": ["node_modules"]
 }

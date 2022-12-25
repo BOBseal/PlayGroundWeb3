@@ -19,7 +19,7 @@ const Home = ({collections}:Props) => {
     <Head>
       <title>
         BOB Collection - Home
-      </title> <link rel='icon' href='/vercel.svg'/>
+      </title> <link rel='icon' href='/99398032_p0.jpg'/>
     </Head>
 
     <p>

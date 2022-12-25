@@ -32,7 +32,7 @@ const DropPG =({collections} : Props) =>{
   const adr =useAddress();
   const discon = useDisconnect();
   const conn =useMetamask();
-  const NFTdrop = useContract("0x07a266e1bA25007132B9919225E5cC9cc0042740", "nft-drop").contract;
+  const NFTdrop = useContract("0xd4D89Db04e7926585305BC99B07330E7BBffa9a4", "nft-drop").contract;
 
 useEffect ( ()=> {
 if (!NFTdrop) return;

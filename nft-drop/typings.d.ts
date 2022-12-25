@@ -24,3 +24,9 @@ export interface COLLECTION{
     mainimage: Image
     previewimage: Image
 }
+export interface GATE {
+    _id: string
+    name:string
+    pageurl: string
+    slug:{current: string}
+}
