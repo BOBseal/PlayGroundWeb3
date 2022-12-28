@@ -58,7 +58,7 @@ function Bobland() {
 <div className='w-screen h-screen items-center grid flex-col gap-2 lg:grid-cols-2 pl-6 md:pl-8 lg:pl-12'>
     
             <div className='bg-red-200 h-64 w-11/12  lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
-                <div className='flex items-center justify-center pt-4 text-xl font-semibold h-8 lg:h-16 cursor-grab'> 
+                <div className='flex items-center justify-center pt-8 text-xl font-semibold h-8 lg:h-16 cursor-grab'> 
                   <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-red-400/50 to-red-100 border-2 border-gray-500 font-serif'>
                     LOTTERY DETAILS 
                   </div>
@@ -68,7 +68,7 @@ function Bobland() {
 
 
             <div className='bg-blue-200 h-64 w-11/12 lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
-                <div className='flex items-center justify-center pt-4 text-xl font-semibold h-8 lg:h-16 cursor-grab pb-16 md:pb-24 lg:pb-40'> 
+                <div className='flex items-center justify-center pt-8 text-xl font-semibold h-8 lg:h-16 cursor-grab pb-16 md:pb-24 lg:pb-40'> 
                   <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-blue-400/50 to-blue-100 border-2 border-gray-500 font-serif'>
                     PARTICIPATE 
                   </div>
