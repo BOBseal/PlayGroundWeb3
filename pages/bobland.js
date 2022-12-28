@@ -64,11 +64,11 @@ function Bobland() {
                   </div>
                 </div>
                 
-                <div className=' grid grid-cols-2 p-10 gap-x-4 w-full h-56 md:h-96 lg:pt-24 '>
+                <div className=' grid grid-cols-2 p-10 gap-x-4 w-full md:h-96 lg:pt-24'>
 
-                  <div className='flex bg-rose-300/40 rounded-lg shadow-md flex-col items-center'>
+                  <div className='flex bg-rose-300/40 rounded-lg shadow-md flex-col items-center md:h-36 lg:h-72'>
                     
-                      <div className=' pt-4 text-xl font-serif font-semibold'>Next Draw In </div>
+                      <div className=' pt-4 text-lg md:text-xl lg:text-2xl font-serif font-semibold'>Next Draw In </div>
                       <div className='grid grid-cols-3 pb-2 pt-2 gap-4 animate-bounce'>
                         <div className='text-3xl text-red-500'>.</div>
                         <div className='text-3xl text-yellow-500'>.</div>
@@ -84,7 +84,7 @@ function Bobland() {
 
                   </div>
 
-                  <div className='flex justify-center bg-purple-400/20 rounded-lg shadow-md '>
+                  <div className='flex justify-center bg-purple-400/20 rounded-lg shadow-md md:h-36 lg:h-72 transition-all'>
                     right
                   </div>
 
