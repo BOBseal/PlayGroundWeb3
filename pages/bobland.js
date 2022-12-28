@@ -57,33 +57,70 @@ function Bobland() {
 </div>
 <div className='w-screen h-screen items-center grid flex-col gap-2 lg:grid-cols-2 pl-6 md:pl-8 lg:pl-12'>
     
-            <div className='bg-red-200 h-64 w-11/12  lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
+            <div className='bg-red-200 h-64 w-11/12 md:h-1/2 lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
                 <div className='flex items-center justify-center pt-8 text-xl font-semibold h-8 lg:h-16 cursor-grab'> 
                   <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-red-400/50 to-red-100 border-2 border-gray-500 font-serif'>
                     LOTTERY DETAILS 
                   </div>
                 </div>
+                
+                <div className=' grid grid-cols-2 p-10 gap-x-4 w-full h-56 md:h-96 lg:pt-24 '>
+
+                  <div className='flex bg-rose-300/40 rounded-lg shadow-md flex-col items-center'>
+                    
+                      <div className=' pt-4 text-xl font-serif font-semibold'>Next Draw In </div>
+                      <div className='grid grid-cols-3 pb-2 pt-2 gap-4 animate-bounce'>
+                        <div className='text-3xl text-red-500'>.</div>
+                        <div className='text-3xl text-yellow-500'>.</div>
+                        <div className='text-3xl text-green-500'>.</div>
+                      </div>
+                      <div className='grid grid-cols-3 gap-2 p-2 items-center '>
+
+                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
+                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
+                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>  
+
+                      </div>
+
+                  </div>
+
+                  <div className='flex justify-center bg-purple-400/20 rounded-lg shadow-md '>
+                    right
+                  </div>
+
+                </div>
 
             </div>
 
 
-            <div className='bg-blue-200 h-64 w-11/12 lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
-                <div className='flex items-center justify-center pt-8 text-xl font-semibold h-8 lg:h-16 cursor-grab pb-16 md:pb-24 lg:pb-40'> 
+            <div className='bg-blue-200 h-64 w-11/12 md:h-1/2 lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
+                <div className='flex items-center justify-center pt-8 text-xl font-semibold h-8 lg:h-16 cursor-grab pb-10 md:pb-10 lg:pb-40'> 
                   <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-blue-400/50 to-blue-100 border-2 border-gray-500 font-serif'>
                     PARTICIPATE 
                   </div>
                 </div>
               <div className='flex justify-center'>
-                  <div className='flex items-center space-x-2 bg-gradient-to-r from-blue-300/70 to bg-blue-200/40 border-2 border-gray-400 rounded-full h-16 w-8/12 p-4 lg:p-8 lg:h-28 shadow-md'>
-                  <div className='text-lg font-medium font-serif rounded-full text-violet-800 w-full cursor-pointer'> TICKETS </div>
+                  <div className='flex items-center space-x-2 bg-gradient-to-r from-blue-300/70 to bg-blue-200/40 border-2 border-gray-400 rounded-xl h-16 w-8/12 p-4 lg:p-8 lg:h-28 shadow-md'>
+                  <div className='text-lg font-medium font-serif rounded-xl text-violet-800 w-full cursor-pointer lg:text-2xl lg:font-bold'> TICKETS </div>
                 
                   <input className='flex cursor-pointer w-full bg-transparent text-right outline-none text-black text-2xl md:text-3xl lg:text-4xl ' type="number" min={1}/>
                 
                   </div>
              </div>
 
-             <div className=' flex items-center justify-center pt-4 md:pt-6 lg:pt-8 transition-all '>
-               <div className='h-12 w-2/6 hover:text-xl transition-transform rounded-full  bg-gradient-to-br from-blue-300/70 to bg-blue-200/60 flex items-center justify-center text-lg font-bold font-serif text-red-700 shadow-xl border-2 border-gray-500 cursor-grab hover:scale-105 ease-out duration-800 '> BUY</div>
+             <div className=' flex items-center justify-center pt-2 md:pt-4 lg:pt-8 transition-all '>
+               <div className='h-12 w-2/6 hover:text-xl transition-transform rounded-full  bg-gradient-to-br from-blue-300/70 to bg-blue-200/60 flex items-center justify-center text-lg font-bold font-serif text-red-700 shadow-xl border-2 border-gray-500 cursor-grab hover:scale-105 ease-out duration-800 '>
+                  PURCHASE
+              </div>
+              </div>
+              <div className='bg-transparent grid grid-cols-2 gap-y-2 w-full shadow-sm shadow-blue-300/40 lg:pt-8 pt-4'> 
+              
+              <div className='flex items-center justify-center text-lime-600 text-sm italic'>Total Cost : {"fill"} </div>
+              <div className='flex items-center justify-center text-lime-600 text-sm italic'>Estimated Gas : {"fill"}</div>
+              {/*<div className='flex items-center justify-center text-lime-600 text-sm italic'> hello</div>*/}
+              </div>
+              <div>
+                
               </div>
             </div>
     
