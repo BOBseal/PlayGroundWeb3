@@ -76,9 +76,9 @@ function Bobland() {
                       </div>
                       <div className='grid grid-cols-3 gap-2 p-2 items-center '>
 
-                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
-                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
-                          <div className='flex w-12 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>  
+                          <div className='flex w-8 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
+                          <div className='flex w-8 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>
+                          <div className='flex w-8 h-8 bg-red-200 rounded-lg shadow items-center justify-center animate-pulse'> 0</div>  
 
                       </div>
 
