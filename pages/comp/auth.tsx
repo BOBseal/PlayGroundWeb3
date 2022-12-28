@@ -42,12 +42,12 @@ import Head from 'next/head';
       
       <div className='flex items-center justify-center pb-8 bg-red-300 h-auto m-auto shadow-xl shadow-gray-300 p-4 hover:scale-105 ease-in duration-300'> <Navba/></div>
       <div className='flex pt-12 justify-center text-2xl lg:text-4xl underline underline-offset-2 text-red-600 font-extrabold font-serif md:text-3xl'>
-      OOPS YOU'RE NOT CONNECTED!
+      OOPS YOU ARE NOT CONNECTED!
       </div>
         <div className='flex pt-2 justify-center text-lg text-emerald-600 font-semibold'>
           Connect Now
         </div>
-    <div className={styl.MainContainer}>  <div className='grid grid-cols-2 gap-8 lg:grid-cols-3 md:grid-cols-3 md:gap-16 lg:gap-24'>
+    <div className={styl.MainContainer}>  <div className='grid flex-col gap-8 lg:grid-cols-3 md:grid-cols-3 md:gap-16 lg:gap-24'>
       <a className={styl.ButtonBox}> <a className={styl.boxtext}> <button onClick={() => connectWithCoinbaseWallet()}>
           COINBASE
         </button> </a></a>
