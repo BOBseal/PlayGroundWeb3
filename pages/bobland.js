@@ -25,7 +25,7 @@ function Bobland() {
   if (!addr) return  <BOBCONN/>;
   
   return ( 
-    <div className='max-h-screen max-w-screen'>
+    <div className='max-h-screen max-w-screen '>
      < Head>
         <title>Phantom Lottery | WEB3 Lottery </title>
         <meta name="description" content="A Lottery Feature by BOB on the Fantom Blockchain" />
@@ -50,7 +50,7 @@ function Bobland() {
 
             <div>
                 <div className='flex items-center justify-end pr-12  pb-2 lg:pb-8 lg:pr-32 '>  
-                <div className='flex items-center text-sm text-emerald-300'>  User: {addr?.substring(0,4)}...{addr?.substring(addr.length, addr.length -4)}</div>
+                <div className='flex items-center text-sm  text-emerald-300'>  User: {addr?.substring(0,4)}...{addr?.substring(addr.length, addr.length -4)}</div>
                 </div>
             </div>
             </div>
@@ -59,17 +59,32 @@ function Bobland() {
     
             <div className='bg-red-200 h-64 w-11/12  lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
                 <div className='flex items-center justify-center pt-4 text-xl font-semibold h-8 lg:h-16 cursor-grab'> 
-                  <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-red-400/50 to-red-100 border-2 border-gray-500 font-serif'>LOTTERY DETAILS </div>
+                  <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-red-400/50 to-red-100 border-2 border-gray-500 font-serif'>
+                    LOTTERY DETAILS 
+                  </div>
                 </div>
 
             </div>
 
 
             <div className='bg-blue-200 h-64 w-11/12 lg:h-1/2 rounded-2xl border-x-2 border-gray-600'>
-                <div className='flex items-center justify-center pt-4 text-xl font-semibold h-8 lg:h-16 cursor-grab'> 
-                  <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-blue-400/50 to-blue-100 border-2 border-gray-500 font-serif'>PARTICIPATE </div>
+                <div className='flex items-center justify-center pt-4 text-xl font-semibold h-8 lg:h-16 cursor-grab pb-16 md:pb-24 lg:pb-40'> 
+                  <div className='flex items-center w-4/6 justify-center shadow-md rounded-full hover:scale-105 ease-out duration-200 bg-gradient-to-bl from-blue-400/50 to-blue-100 border-2 border-gray-500 font-serif'>
+                    PARTICIPATE 
+                  </div>
                 </div>
+              <div className='flex justify-center'>
+                  <div className='flex items-center space-x-2 bg-gradient-to-r from-blue-300/70 to bg-blue-200/40 border-2 border-gray-400 rounded-full h-16 w-8/12 p-4 lg:p-8 lg:h-28 shadow-md'>
+                  <div className='text-lg font-medium font-serif rounded-full text-violet-800 w-full cursor-pointer'> TICKETS </div>
+                
+                  <input className='flex cursor-pointer w-full bg-transparent text-right outline-none text-black text-2xl md:text-3xl lg:text-4xl ' type="number" min={1}/>
+                
+                  </div>
+             </div>
 
+             <div className=' flex items-center justify-center pt-4 md:pt-6 lg:pt-8 transition-all '>
+               <div className='h-12 w-2/6 hover:text-xl transition-transform rounded-full  bg-gradient-to-br from-blue-300/70 to bg-blue-200/60 flex items-center justify-center text-lg font-bold font-serif text-red-700 shadow-xl border-2 border-gray-500 cursor-grab hover:scale-105 ease-out duration-800 '> BUY</div>
+              </div>
             </div>
     
 </div>
