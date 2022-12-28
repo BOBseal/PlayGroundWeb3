@@ -1,13 +1,17 @@
+import { useContract , useDisconnect , useContractData , useContractCall, useAddress, } from '@thirdweb-dev/react'
 import Link from 'next/link'
 import { useState } from 'react'
 
 function MobileNav({open, setOpen}) {
+    const contract = useContract( 0x9Be4c9456f9BB39C63C3F068068E45cd8e4a522A , "custom")
+    //const contData = useContractData();
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-gradient-to-bl from-red-300 to-cyan-100 transform ${open ? "-translate-y-0" : "-translate-y-full"} transition-transform duration-300 ease-in-out filter  `}>
+        <div className={`absolute top-0 left-0 h-screen w-screen lg:w-1/4 bg-gradient-to-bl from-red-300 to-cyan-100 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter  `}>
            
             <div className="flex flex-col justify-center items-center mt-28">
-            <Link  href= './'> <div className='text-2xl font-bold text-red-500 my-4 hover:scale-105 ease-in duration-300 hover:text-yellow-400'>  HOME </div> </Link>
-                <Link  href= './playground' > <div className='text-2xl font-bold text-red-500 my-4 hover:scale-105 ease-in duration-300 hover:text-yellow-400'>  PLAYGROUND </div> </Link>
+            <Link  href= './'> <div className='text-2xl font-bold text-red-500 my-4 hover:scale-105 ease-in duration-300 hover:text-blue-600'>  HOME </div> </Link>
+                <Link  href= './playground' > <div className='text-2xl font-bold text-red-600 my-4 hover:scale-105 ease-in duration-300 hover:text-blue-600'>  PLAYGROUND </div> </Link>
+                <div className='text-2xl font-bold text-red-700 my-4 hover:scale-105 ease-in duration-300 hover:text-blue-600'>  BUY TICKETS </div>
                 
             </div>  
         </div>
@@ -15,7 +19,7 @@ function MobileNav({open, setOpen}) {
 }
 
 
-export default function Navba() {
+export default function Navigator() {
 
     const [open, setOpen] = useState(false)
     return (
